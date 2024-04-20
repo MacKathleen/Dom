@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício DOM</title>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Item inicial</li>
+    </ul>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <button onclick="removerItem()">Remover Item</button>
+
+
+    <script>
+
+        function adicionarItem() {
+            let novoItem = document.createElement('li');
+            novoItem.textContent = "Novo item adicionado dinamicamente.";
+            novoItem.id = "novoItem";
+            document.getElementById('lista').appendChild(novoItem);
+        }
+        function removerItem() {
+
+            let ultimoItem = document.getElementById('novoItem');
+            if (ultimoItem) {
+                ultimoItem.remove();
+
+            }
+        }
+    </script>
+</body>
+
+</html>
